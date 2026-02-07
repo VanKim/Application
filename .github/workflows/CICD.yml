@@ -33,7 +33,7 @@ jobs:
         - name: Trigger automation tests
           run: |
             curl -X POST \
-              -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+              -H "Authorization: token ${{ secrets.AUTOMATION_PAT }}" \
               https://api.github.com/repos/VanKim/Automation_02/dispatches \
               -d '{"event_type":"run-dev-tests"}'
 
