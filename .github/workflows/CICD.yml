@@ -30,8 +30,6 @@ jobs:
       needs: deploy-dev
 
       steps:
-        - name: kiem tra AUTOMATION_PAT
-          run: echo "hello $secrets.AUTOMATION_PAT"
         - name: Trigger automation tests
           run: |
             curl -X POST \
