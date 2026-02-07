@@ -1,6 +1,6 @@
 
 #CI Automation testing
-name: Run CI application
+name: Run CI/CD application
 on:
   push:
     branches: [main]
@@ -8,6 +8,7 @@ on:
     branches: [main]
 jobs:
   ci:
+    name: CI
     runs-on: ubuntu-latest
     steps:
     - name: By Pass CI
