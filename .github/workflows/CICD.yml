@@ -35,7 +35,9 @@ jobs:
         - name: Trigger automation tests
           run: |
             curl -X POST \
+              -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer ${{ secrets.AUTOMATION_PAT }}" \
+              -H "Content-Type: application/json" \
               https://api.github.com/repos/VanKim/Automation_02/dispatches \
               -d '{"event_type":"run-dev-tests"}'
 
