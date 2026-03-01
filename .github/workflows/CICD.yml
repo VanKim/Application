@@ -1,6 +1,7 @@
 
-#CI Automation testing
+#CI
 name: Run CI/CD application
+run-name: Run CI/CD application
 on:
   push:
     branches: [main]
@@ -24,7 +25,7 @@ jobs:
         - name: Deploy application to DEV
           run: echo "Deploying to DEV environment..."
 
-  #Test DEV: integration + functional
+  #Test DEV
   test-dev:
       name: Automation Test on DEV
       runs-on: ubuntu-latest
