@@ -1,7 +1,7 @@
 
 #CI
-name: Run CI/CD application
-run-name: Run CI/CD application
+name: Application CI/CD
+run-name: Application CI/CD | ${{ github.ref_name }} | ${{ github.actor }}
 on:
   push:
     branches: [main]
